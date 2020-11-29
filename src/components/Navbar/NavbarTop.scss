@@ -1,0 +1,26 @@
+.navbar-top {
+  display: flex;
+  width: 100;
+  background-color: #b1d6f8da;
+  margin-bottom: 0.75rem;
+
+  .navi {
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    justify-content: space-between;
+
+    .nav-brand {
+      font-size: 3.5vw;
+      letter-spacing: 0.5vw;
+    }
+  }
+  .nav-zip {
+    display: flex;
+
+    .zip-search {
+      margin-top: 0;
+      width: 20rem;
+    }
+  }
+}

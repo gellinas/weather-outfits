@@ -1,0 +1,38 @@
+.daily-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  overflow: hidden;
+
+  .get-local {
+    display: flex;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin: 1.5rem 0 1.5rem 0;
+    height: 5vh;
+    word-spacing: 3vw;
+    letter-spacing: 2vw;
+  }
+
+  .daily-body {
+    display: flex;
+    width: 100vw;
+    height: 75vh;
+    align-items: center;
+    justify-content: space-between;
+
+    .daily-outfits-contained {
+      display: flex;
+      width: 62vw;
+      height: 75vh;
+      flex-flow: row wrap;
+      justify-content: center;
+      overflow-y: scroll;
+
+      #weather-outfit-key {
+        height: 43vh;
+      }
+    }
+  }
+}

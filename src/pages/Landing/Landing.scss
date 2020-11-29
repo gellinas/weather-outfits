@@ -1,0 +1,42 @@
+.landing-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+  ::after {
+    content: "";
+    background-image: url(../../assets/harmen-jelle-van-mourik-IyOOKwXXMUM-unsplash.jpg);
+    background-color: #ffffff;
+    background-size: cover;
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .landing-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 74vh;
+    font-size: 2vw;
+    margin-top: 12vh;
+    width: 100vw;
+
+    .zip-searching {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10vh;
+
+      input .form-control {
+        color: #122c44;
+      }
+    }
+  }
+}

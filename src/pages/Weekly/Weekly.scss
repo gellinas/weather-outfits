@@ -1,0 +1,22 @@
+.weekly-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+
+  .get-local {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    word-spacing: 3vw;
+    letter-spacing: 1.25vw;
+  }
+}
+.weekly-body {
+  display: flex;
+  width: 100vw;
+  height: 85vh;
+  flex-direction: row;
+  align-items: center;
+}

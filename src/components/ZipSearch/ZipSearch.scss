@@ -1,0 +1,15 @@
+.zip-search {
+  display: flex;
+  width: 20rem;
+  flex-direction: column;
+  text-align: center;
+
+  .not-valid {
+    color: #b60202;
+  }
+
+  .landing-zip {
+    color: #b60202;
+    font-size: 1.25rem;
+  }
+}
