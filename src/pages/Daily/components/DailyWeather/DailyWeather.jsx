@@ -6,8 +6,7 @@ import "./DailyWeather.scss";
 
 function DailyWeather(props) {
   const { tempInfo } = props;
-
-  const theTempF = `${Math.round(tempInfo.temp.day)} F`;
+  const theTempF = `${Math.round(tempInfo.main.temp_max)} F`;
 
   const onBackButtonClick = () => {
     const { history } = props;
@@ -16,7 +15,7 @@ function DailyWeather(props) {
 
   return (
     <div className="daily-weather-container">
-      <div className="day-date">{getDate(tempInfo.dt)}</div>
+      <div className="day-date">{getDate(tempInfo.dt_txt)}</div>
       <div className="day-temp">{theTempF}</div>
       <div className="day-weather">{tempInfo.weather[0].main}</div>
       <Button

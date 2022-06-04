@@ -7,8 +7,7 @@ const getLocation = (dayForecast) => {
 };
 
 const getDate = (dt) => {
-  const milliseconds = dt * 1000;
-  const dateString = new Date(milliseconds).toDateString("en-US");
+  const dateString = new Date(dt).toLocaleDateString("en-US",{timeZone: "UTC", day: "2-digit", month: "short", year: "numeric", weekday: "short"});
   return dateString;
 };
 

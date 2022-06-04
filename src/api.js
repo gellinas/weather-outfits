@@ -1,5 +1,5 @@
 const getFiveDayForecast = async (zipcode) => {
-  const url = `http://api.openweathermap.org/data/2.5/forecast/daily?zip=${zipcode}&units=imperial&appid=bd4b7345ee94566aaa64bca2c95f14b2&cnt=5`;
+  const url = `http://api.openweathermap.org/data/2.5/forecast?zip=${zipcode},us&units=imperial&appid=0e36b28a5153fda888b2619f10568722`;
   const response = await fetch(url, { method: "GET" });
   const data = await response.json();
   return data;
@@ -14,7 +14,7 @@ const getWeatherOutfits = async () => {
 };
 
 const getTodaysForecast = async (zipcode) => {
-  const url = `http://api.openweathermap.org/data/2.5/forecast/daily?zip=${zipcode}&units=imperial&appid=bd4b7345ee94566aaa64bca2c95f14b2&cnt=1`;
+  const url = `http://api.openweathermap.org/data/2.5/forecast?zip=${zipcode},us&units=imperial&appid=0e36b28a5153fda888b2619f10568722`;
   const response = await fetch(url, { method: "GET" });
   const data = await response.json();
   return data;

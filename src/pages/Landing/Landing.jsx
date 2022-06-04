@@ -9,7 +9,7 @@ function Landing(props) {
     <div className="landing-container">
       <LandingHeader />
       <div className="landing-body">
-        <div>Providing outfit inspiration for the weather</div>
+        <div>Providing you with outfit inspiration for the weather</div>
         <div className="zip-searching">
           <ZipSearch {...props} landingZip="landing-zip" />
         </div>

@@ -3,7 +3,7 @@ import NavbarTop from "../../components/Navbar/NavbarTop.jsx";
 import WeeklyCard from "./components/WeeklyCards/WeeklyCard.jsx";
 import { getFiveDayForecast, getWeatherOutfits } from "../../api.js";
 import { getOutfitByTemp, getDate, getLocation } from "../../util.js";
-import { groupBy, get } from "lodash";
+import { groupBy, get, uniqBy } from "lodash";
 
 import "./Weekly.scss";
 
@@ -53,22 +53,33 @@ function Weekly(props) {
       <NavbarTop {...props} />
       <div className="get-local">{getLocation(dayForecast)}</div>
       <div className="weekly-body">
-        {dayForecast.list.map((item, index) => (
-          <div id="forecast-day-key" key={index}>
-            <WeeklyCard
-              temp={Math.round(item.temp.day)}
-              date={getDate(item.dt)}
-              weather={item.weather[0].main}
-              outfit={getOutfitByTemp(item.temp.day, weatherOutfits).outfit}
-              onClick={() =>
-                onSeeMoreClick(
-                  item,
-                  getOutfitByTemp(item.temp.day, weatherOutfits).group
-                )
-              }
-            />
-          </div>
-        ))}
+        {uniqBy(
+          dayForecast.list.map((val) => {
+            return { ...val, dt_txt: val.dt_txt.split(" ")[0] };
+          }),
+          "dt_txt"
+        ).map((item, index) => {
+          if (index <= 4) {
+            return (
+              <div id="forecast-day-key" key={index}>
+                <WeeklyCard
+                  temp={Math.round(item.main.temp_max)}
+                  date={getDate(item.dt_txt)}
+                  weather={item.weather[0].main}
+                  outfit={
+                    getOutfitByTemp(item.main.temp_max, weatherOutfits).outfit
+                  }
+                  onClick={() =>
+                    onSeeMoreClick(
+                      item,
+                      getOutfitByTemp(item.main.temp_max, weatherOutfits).group
+                    )
+                  }
+                />
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );

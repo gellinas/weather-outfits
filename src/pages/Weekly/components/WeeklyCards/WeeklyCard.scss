@@ -2,7 +2,7 @@
   display: flex;
   width: 19vw;
   height: 70vh;
-  margin: 0.5vw;
+  margin: 0.45em;
   padding-top: 2rem;
   align-items: center;
 
@@ -15,7 +15,10 @@
   }
 
   .card-title {
-    font-size: 1.75rem;
+    font-size: 30px;
+  }
+  .card-text {
+    font-size: 16px;
   }
   .outfit-daily-img {
     width: 16vw;
