@@ -2,7 +2,9 @@
 
 Weather Outfits is a web application presenting users with outfit inspiration based on the temperatures at zip codes across the United States. It provides the user with a five day forecast.
 
-Images are sourced from the free stock photo website [Pexels](https://www.pexels.com/). These images are stored on [Google Firebase](https://firebase.google.com/) using the Firestore feature.
+Images are sourced from the free stock photo website [Pexels](https://www.pexels.com/). These images are stored on [Google Firebase](https://firebase.google.com/) using the Firestore feature. 
+
+The weather data is sourced from [Open Weather API](http://api.openweathermap.org).
 
 The images are sorted by temperature ranges in degrees Farenheit:  
 less than 55  
